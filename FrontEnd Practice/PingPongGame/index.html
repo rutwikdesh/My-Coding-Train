@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ping Pong Game</title>
+  </head>
+  <body>
+    <div class="game">
+      <div class="game-header">Ping Pong ScoreKeeper</div>
+      <div class="game-scorekeeper">
+        <div class="game-scorekeeper-score">
+          <span id="p1Display">0</span> to
+          <span id="p2Display">0</span>
+        </div>
+        <div class="game-scorekeeper-info">Use the buttons to keep score</div>
+        <div class="game-scorekeeper-plays">
+          <span class="game-scorekeeper-plays-heading">Playing To</span>
+          <select
+            class="game-scorekeeper-plays-number"
+            id="game-scorekeeper-plays-number"
+          >
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+      <div class="game-controls">
+        <button class="game-controls-p1" id="game-controls-p1">
+          +1 Player One
+        </button>
+        <button class="game-controls-p2" id="game-controls-p2">
+          +1 Player Two
+        </button>
+        <button class="game-controls-reset" id="game-controls-reset">
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -3,6 +3,9 @@ public class Main {
         System.out.println("hi");
         Main.Inner a = new Inner();
         a.myFun();
+
+        Test.Inner t = new Test().new Inner();
+        t.innerDisplay();
     }
 
     static class Inner{

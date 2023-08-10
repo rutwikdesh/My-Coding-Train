@@ -10,12 +10,17 @@ public class Threads extends Thread {
     public static void main(String[] args) {
         // Using Thread class
         Threads t = new Threads();
+        t.setPriority(6);
         t.start();
+        System.out.println(t.getPriority());
 
         // Using Runnable interface
         Myclass tea = new Myclass();
         Thread th = new Thread(tea);
+        th.setPriority(3);
         th.start();
+//        th.setPriority(10);
+        System.out.println(th.getPriority());
 
         // Main loop
         int i = 0;
@@ -26,7 +31,7 @@ public class Threads extends Thread {
     }
 }
 
-class Myclass extends Threads implements Runnable {
+class Myclass implements Runnable {
     public void run(){
         int i = 0;
         while(i<10){

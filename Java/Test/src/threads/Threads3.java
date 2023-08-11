@@ -1,3 +1,5 @@
+package threads;
+
 class MyData
 {
     // Using the synchronized keyword to synchronize the execution of the

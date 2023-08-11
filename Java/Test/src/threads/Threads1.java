@@ -1,3 +1,5 @@
+package threads;
+
 class MyThread extends Thread{
     MyThread(String name){
         super(name);

@@ -1,3 +1,5 @@
+package threads;
+
 class MyThread3 extends Thread{
     public void run(){
         int count = 1;
@@ -17,7 +19,7 @@ public class Threads2 {
         th.setDaemon(true);
         th.start();
 
-        // Sleep current thread for 1 sec so that we can see MyThread3 getting exited after
+        // Sleep current thread for 1 sec so that we can see threads.MyThread3 getting exited after
         // main terminates
         try{
             Thread.sleep(1000);

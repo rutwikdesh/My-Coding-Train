@@ -1,3 +1,5 @@
+package threads;
+
 class MyDataa {
     int value;
     boolean flag = true;
@@ -42,7 +44,7 @@ class Producer extends Thread {
         int count = 1;
         while (true) {
             data.set(count);
-            System.out.println("Producer " + count);
+            System.out.println("threads.Producer " + count);
             count++;
         }
     }
@@ -59,7 +61,7 @@ class Consumer extends Thread {
         int value;
         while (true) {
             value = data.get();
-            System.out.println("Consumer " + value);
+            System.out.println("threads.Consumer " + value);
         }
     }
 }

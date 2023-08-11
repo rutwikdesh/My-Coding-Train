@@ -1,3 +1,5 @@
+package threads;
+
 public class Threads extends Thread {
     public void run(){
         int i = 0;

@@ -18,22 +18,18 @@ public class CruddemoApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		return runner -> {
 //			createStudent(studentDAO);
-			createMultipleStudents(studentDAO);
+//			createMultipleStudents(studentDAO);
+			findStudent(studentDAO);
 		};
 	}
 
-	private void createStudent(StudentDAO studentDAO) {
-		// Create the student object
-		System.out.println("Creating a new student object....");
-		Student std1 = new Student("John", "Doe", "john@doe.com");
-
-
-		// Save the student object
-		System.out.println("Saving the student....");
+	private void findStudent(StudentDAO studentDAO) {
+		Student std1 = new Student("Roe", "Kite", "roe@kite.com");
 		studentDAO.save(std1);
+		Integer id = std1.getId();
 
-		// Display id of the saved student
-		System.out.println("Student saved. ID of the student: " + std1.getId());
+		Student std = studentDAO.findById(id);
+		System.out.println(std);
 	}
 
 	private void createMultipleStudents(StudentDAO studentDAO) {
@@ -53,5 +49,19 @@ public class CruddemoApplication {
 		System.out.println("Student saved. ID of the student: " + std1.getId());
 		System.out.println("Student saved. ID of the student: " + std2.getId());
 		System.out.println("Student saved. ID of the student: " + std3.getId());
+	}
+
+	private void createStudent(StudentDAO studentDAO) {
+		// Create the student object
+		System.out.println("Creating a new student object....");
+		Student std1 = new Student("John", "Doe", "john@doe.com");
+
+
+		// Save the student object
+		System.out.println("Saving the student....");
+		studentDAO.save(std1);
+
+		// Display id of the saved student
+		System.out.println("Student saved. ID of the student: " + std1.getId());
 	}
 }

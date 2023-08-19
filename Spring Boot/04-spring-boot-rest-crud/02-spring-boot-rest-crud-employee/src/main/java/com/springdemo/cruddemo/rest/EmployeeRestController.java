@@ -4,9 +4,7 @@ import com.springdemo.cruddemo.dao.EmployeeDAO;
 import com.springdemo.cruddemo.entity.Employee;
 import com.springdemo.cruddemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,25 @@ public class EmployeeRestController {
     @GetMapping("/employees")
     public List<Employee> findAllEmployees(){
         return employeeService.findAll();
+    }
+
+    @GetMapping("/employees/{employeeId}")
+    public Employee findEmployee(@PathVariable int employeeId){
+        Employee theEmployee = employeeService.findById(employeeId);
+        if(theEmployee == null){
+            throw new RuntimeException("Employee id not found - " + employeeId);
+        }
+        return theEmployee;
+    }
+
+    @PostMapping("/employees")
+    public Employee addEmployee(@RequestBody Employee theEmployee){
+
+        // In case they pass an id in json, set id to 0
+        // so that to force a save of the item ... instead of update
+        theEmployee.setId(0);
+
+        Employee dbEmployee = employeeService.save(theEmployee);
+        return dbEmployee;
     }
 }

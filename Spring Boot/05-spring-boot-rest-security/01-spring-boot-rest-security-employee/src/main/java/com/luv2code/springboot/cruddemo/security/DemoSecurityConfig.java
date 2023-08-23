@@ -14,9 +14,22 @@ import javax.sql.DataSource;
 @Configuration
 public class DemoSecurityConfig {
     // add support for JDBC, so no more hardcoded users
+    // Authorities and Users are the default tables for Spring Security config
     @Bean
     public UserDetailsManager userDetailsManager(DataSource dataSource){
-        return new JdbcUserDetailsManager(dataSource);
+        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
+
+        // define query to retrieve users by username
+        jdbcUserDetailsManager.setUsersByUsernameQuery(
+                "select user_id, pw, active from members where user_id=?"
+        );
+
+        // define query to retrieve authorities/roles by username
+        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery(
+                "select user_id, role from roles where user_id=?"
+        );
+
+        return jdbcUserDetailsManager;
     }
 
     @Bean

@@ -13,7 +13,7 @@ public class InstructorDetail {
 
     // annotate the fields with db column names
 
-    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "instructorDetail", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Instructor instructor;
 
     public Instructor getInstructor() {

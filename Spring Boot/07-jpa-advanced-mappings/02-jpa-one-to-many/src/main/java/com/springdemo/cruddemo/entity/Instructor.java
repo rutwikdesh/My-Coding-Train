@@ -41,7 +41,9 @@ public class Instructor {
     private InstructorDetail instructorDetail;
 
     // The below instructor is referencing the instructor from Course class
-    @OneToMany(mappedBy = "instructor", cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+    @OneToMany(mappedBy = "instructor",
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE,
             CascadeType.DETACH, CascadeType.REFRESH})
     private List<Course> courses;
 

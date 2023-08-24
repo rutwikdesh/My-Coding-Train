@@ -13,6 +13,16 @@ public class InstructorDetail {
 
     // annotate the fields with db column names
 
+    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    private Instructor instructor;
+
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

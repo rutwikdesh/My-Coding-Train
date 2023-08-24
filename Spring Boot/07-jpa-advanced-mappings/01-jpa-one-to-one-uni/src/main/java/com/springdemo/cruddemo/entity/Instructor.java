@@ -2,6 +2,8 @@ package com.springdemo.cruddemo.entity;
 
 import jakarta.persistence.*;
 
+@Entity
+@Table(name="instructor")
 public class Instructor {
     // annotate the class as an entity and map to db table
 

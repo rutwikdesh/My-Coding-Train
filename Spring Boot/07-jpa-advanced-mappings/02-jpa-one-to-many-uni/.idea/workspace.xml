@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30a7234f-b9b8-415d-abb6-f8fe085e3e18" name="Changes" comment="JPA Advanced Mappings - One-to-One Many | Delete Course with Reviews">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdemo/cruddemo/CruddemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdemo/cruddemo/dao/AppDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdemo/cruddemo/dao/AppDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdemo/cruddemo/entity/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdemo/cruddemo/entity/Instructor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdemo/cruddemo/entity/InstructorDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdemo/cruddemo/entity/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/springdemo/cruddemo/CruddemoApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2UObIzy6MOw8OChmpK9yVWQT3T8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Vcs Important Messages&quot;: &quot;VCS important messages&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Vcs Notifications&quot;: &quot;VCS notifications&quot;,
+    &quot;Notification.DoNotAsk-Vcs Important Messages&quot;: &quot;true&quot;,
+    &quot;Notification.DoNotAsk-Vcs Notifications&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.XML&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30a7234f-b9b8-415d-abb6-f8fe085e3e18" name="Changes" comment="" />
+      <created>1692813499773</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692813499773</updated>
+    </task>
+    <task id="LOCAL-00001" summary="JPA Advanced Mappings - Create Instructor">
+      <option name="closed" value="true" />
+      <created>1692814831027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692814831027</updated>
+    </task>
+    <task id="LOCAL-00002" summary="JPA Advanced Mappings - Create Instructor">
+      <option name="closed" value="true" />
+      <created>1692814847448</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692814847448</updated>
+    </task>
+    <task id="LOCAL-00003" summary="JPA Advanced Mappings - One-to-One Uni">
+      <option name="closed" value="true" />
+      <created>1692855928549</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692855928549</updated>
+    </task>
+    <task id="LOCAL-00004" summary="JPA Advanced Mappings - One-to-One Bi">
+      <option name="closed" value="true" />
+      <created>1692859213224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692859213224</updated>
+    </task>
+    <task id="LOCAL-00005" summary="JPA Advanced Mappings - One-to-One Bi - Only delete from one table">
+      <option name="closed" value="true" />
+      <created>1692869444697</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692869444697</updated>
+    </task>
+    <task id="LOCAL-00006" summary="JPA Advanced Mappings - One-to-One Many">
+      <option name="closed" value="true" />
+      <created>1692876983990</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1692876983990</updated>
+    </task>
+    <task id="LOCAL-00007" summary="JPA Advanced Mappings - One-to-One Many | Join Fetch">
+      <option name="closed" value="true" />
+      <created>1692879808471</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1692879808471</updated>
+    </task>
+    <task id="LOCAL-00008" summary="JPA Advanced Mappings - One-to-One Many | Delete Course">
+      <option name="closed" value="true" />
+      <created>1692883389771</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692883389771</updated>
+    </task>
+    <task id="LOCAL-00009" summary="JPA Advanced Mappings - One-to-One Many | Delete Course with Reviews">
+      <option name="closed" value="true" />
+      <created>1692947739191</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692947739191</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="JPA Advanced Mappings - Create Instructor" />
+    <MESSAGE value="JPA Advanced Mappings - One-to-One Uni" />
+    <MESSAGE value="JPA Advanced Mappings - One-to-One Bi" />
+    <MESSAGE value="JPA Advanced Mappings - One-to-One Bi - Only delete from one table" />
+    <MESSAGE value="JPA Advanced Mappings - One-to-One Many" />
+    <MESSAGE value="JPA Advanced Mappings - One-to-One Many | Join Fetch" />
+    <MESSAGE value="JPA Advanced Mappings - One-to-One Many | Delete Course" />
+    <MESSAGE value="JPA Advanced Mappings - One-to-One Many | Delete Course with Reviews" />
+    <option name="LAST_COMMIT_MESSAGE" value="JPA Advanced Mappings - One-to-One Many | Delete Course with Reviews" />
+  </component>
+</project>

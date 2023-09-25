@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "ostream": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "chrono": "cpp",
+    "random": "cpp",
+    "limits": "cpp",
+    "valarray": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp",
+    "regex": "cpp",
+    "utility": "cpp"
+  }
+}

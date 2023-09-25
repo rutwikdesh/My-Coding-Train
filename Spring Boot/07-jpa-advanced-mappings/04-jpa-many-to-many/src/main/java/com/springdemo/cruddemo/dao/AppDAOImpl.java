@@ -13,11 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-public class AppDAOImpl implements AppDAO{
+public class AppDAOImpl implements AppDAO {
 
     private EntityManager entityManager;
+
     @Autowired
-    public AppDAOImpl(EntityManager theEntityManger){
+    public AppDAOImpl(EntityManager theEntityManger) {
         entityManager = theEntityManger;
     }
 
@@ -93,7 +94,8 @@ public class AppDAOImpl implements AppDAO{
                 "select i from Instructor i "
                         + "JOIN FETCH i.courses "
                         + "JOIN FETCH i.instructorDetail "
-                        + "where i.id = :data", Instructor.class);
+                        + "where i.id = :data",
+                Instructor.class);
         query.setParameter("data", theId);
 
         // execute query
@@ -143,7 +145,8 @@ public class AppDAOImpl implements AppDAO{
         TypedQuery<Course> query = entityManager.createQuery(
                 "select c from Course c "
                         + "JOIN FETCH c.reviews "
-                        + "where c.id = :data", Course.class);
+                        + "where c.id = :data",
+                Course.class);
 
         query.setParameter("data", theId);
 
@@ -159,7 +162,8 @@ public class AppDAOImpl implements AppDAO{
         TypedQuery<Course> query = entityManager.createQuery(
                 "select c from Course c "
                         + "JOIN FETCH c.students "
-                        + "where c.id = :data", Course.class);
+                        + "where c.id = :data",
+                Course.class);
 
         query.setParameter("data", theId);
 
@@ -176,7 +180,8 @@ public class AppDAOImpl implements AppDAO{
         TypedQuery<Student> query = entityManager.createQuery(
                 "select s from Student s "
                         + "JOIN FETCH s.courses "
-                        + "where s.id = :data", Student.class);
+                        + "where s.id = :data",
+                Student.class);
 
         query.setParameter("data", theId);
 

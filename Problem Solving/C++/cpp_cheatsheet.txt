@@ -1,7 +1,0 @@
-1. while compairing strings
-
-str1.find(str2) != string::npos
-
-2. 
-
-vector<v>

@@ -1,0 +1,148 @@
+// C++ STL : https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
+
+0. Miscellaneous
+!!! Define size for 2d Vector
+    // 5x5 vector with "0" filled
+    vector<vector<int>> v(5, vector<int>(5, 0));
+
+!!! Define a priority queue
+    priority_queue<int> pq;
+
+!!! Define a priority queue in reverse order (ascending order)
+    priority_queue<int, vector<int>, greater<int>> pq;
+
+!!! Find Lower bound
+    lowerBound is element >= val
+    auto low1 = lower_bound(v.begin(), v.end(), 30) - v.begin();
+    Eg. 
+    Vector contains : 10 20 30 30 30 40 50
+
+    lower_bound for element 30 at position : 2
+    lower_bound for element 35 at position : 5
+    lower_bound for element 55 at position : 7
+
+!!! Find Upper bound
+    upperBound is element > val
+    auto upper1 = upper_bound(v.begin(), v.end(), 35) - v.begin();
+    Eg.
+    Vector contains : 10 20 30 40 50
+    upper_bound for element 35 is at position : 3
+    upper_bound for element 45 is at position : 4
+
+
+!!! Traverse a map
+    -ascending order of keys
+    for(auto it: m){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+
+    -in reverse order(descending order of keys)
+    for(auto it = m.rbegin();it!=m.rend();it++){
+        cout<<it->first<<" "<<it->second<<endl;
+    }
+
+!!! Build Priority Queue using compartor function
+
+    priority_queue<vector<int>, vector<vector<int>>, compare> pq;
+
+    # Descending order
+    struct compare{
+        bool operator()(vector<int> &a, vector<int> &b){
+            return a[1] < b[1];
+        }
+    };
+
+1. while compairing strings/ to find a substring in a string
+
+str1.find(str2) != string::npos
+
+2. STL Functions - 1
+
+distance(InputIterator first, InputIterator last)
+Here, first and last are input iterators between which we have to calculate distance.
+
+first = v.begin();
+ 
+// last pointing to 5
+last = v.begin() + 5;
+
+// Calculating no. of elements between first and last
+int num = distance(first, last);
+
+--> O/p = 5
+
+3. STL Functions - 2 (remove duplicates from vector)
+
+// Sorting the array
+sort(v.begin(), v.end());
+// Now v becomes 1 1 2 2 3 3 3 3 7 7 8 10
+
+// Using std::unique
+ip = unique(v.begin(), v.begin() + 12);
+// Now v becomes {1 2 3 7 8 10 * * * * * *}
+// * means undefined
+
+// Resizing the vector so as to remove the undefined terms
+v.resize(distance(v.begin(), ip));
+
+
+4. STL Functions - 3
+
+arr.erase(position to be deleted) – This erases selected element in vector and shifts and resizes the vector elements accordingly.
+
+Ex. -> vect.erase(find(vect.begin(),vect.end(),10));
+
+5. Convert a string to a vector of chars in C++
+
+int main()
+{
+    std::string s = "Hello World!";
+ 
+    std::vector<char> v(s.begin(), s.end());
+ 
+    for (const char &c: v) {
+        std::cout << c;
+    }
+ 
+    return 0;
+}
+
+next_permutation(first_iterator, last_iterator) – This modified the vector to its next permutation.
+
+prev_permutation(first_iterator, last_iterator) – This modified the vector to its previous permutation. 
+
+
+6. STL Functions - 4
+
+sort(first_iterator, last_iterator) – To sort the given vector.
+
+sort(first_iterator, last_iterator, greater<int>()) – To sort the given container/vector in descending order
+
+reverse(first_iterator, last_iterator) – To reverse a vector. ( if ascending -> descending  OR  if descending -> ascending)
+
+*max_element (first_iterator, last_iterator) – To find the maximum element of a vector.
+
+*min_element (first_iterator, last_iterator) – To find the minimum element of a vector.
+
+accumulate(first_iterator, last_iterator, initial value of sum) – Does the summation of vector elements
+
+count(first_iterator, last_iterator,x) – To count the occurrences of x in vector.
+
+find(first_iterator, last_iterator, x) – Returns an iterator to the first occurrence of x in vector and points to last address of vector ((name_of_vector).end()) if element is not present in vector.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -45,10 +45,10 @@
 
     priority_queue<vector<int>, vector<vector<int>>, compare> pq;
 
-    # Descending order
+    # MAX Heap (Descending order)   // Remember......
     struct compare{
         bool operator()(vector<int> &a, vector<int> &b){
-            return a[1] < b[1];
+            return a[1] < b[1];    // Remember......
         }
     };
 

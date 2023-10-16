@@ -5,10 +5,10 @@
     // 5x5 vector with "0" filled
     vector<vector<int>> v(5, vector<int>(5, 0));
 
-!!! Define a priority queue
+!!! Define a priority queue(MAX Heap)
     priority_queue<int> pq;
 
-!!! Define a priority queue in reverse order (ascending order)
+!!! Define a priority queue in reverse order (ascending order) (MIN Heap)
     priority_queue<int, vector<int>, greater<int>> pq;
 
 !!! Find Lower bound
@@ -52,6 +52,11 @@
         }
     };
 
+!!! Insert a vector into another vector
+    vector<int> p;
+    vector<int> q;
+    p.insert(p.end(), q.begin(), q.end());
+
 1. while compairing strings/ to find a substring in a string
 
 str1.find(str2) != string::npos
@@ -74,7 +79,7 @@ int num = distance(first, last);
 3. STL Functions - 2 (remove duplicates from vector)
 
 // Sorting the array
-sort(v.begin(), v.end());
+sort(v.begin(), v.end());``
 // Now v becomes 1 1 2 2 3 3 3 3 7 7 8 10
 
 // Using std::unique

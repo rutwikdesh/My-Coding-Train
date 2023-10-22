@@ -4,20 +4,34 @@ using namespace std;
 
 int main()
 {
-  vector<int> q;
-  // vector<int> col;
-  q.push_back(1);
-  q.push_back(2);
-  q.push_back(3);
-  q.push_back(4);
-  vector<int> q2;
-  q2.push_back(1);
-  q2.push_back(2);
-  vector<int> col(q.begin(), q.end());
+  string s = "erase*****";
+  string temp = s;
+  s.erase(1, 4);
+  int n = s.size(), count = 0;
+  int i = n - 1;
+  int start, end;
 
-  col.insert(col.end(), q.begin(), q.end());
-  for (int i = 0; i < 8; i++)
+  while (i >= 0)
   {
-    cout << col[i] << " ";
+    if (temp[i] == '*')
+    {
+      if (count == 0)
+      {
+        start = i;
+      }
+      count++;
+    }
+    else
+    {
+      if (count != 0)
+      {
+        end = i;
+        temp.erase(end + end - start, start);
+        i = end + end - start;
+      }
+      count = 0;
+    }
+    i--;
   }
+  cout << temp << endl;
 }

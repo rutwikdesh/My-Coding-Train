@@ -1,0 +1,84 @@
+#BASIC COMMANDS
+
+git init
+git add .
+git add <filename>
+git commit -m "my_commit_msg"
+git commit -am "my_commit_msg"
+git push origin master
+git status
+
+# Add new files to the last commit or edit the details of the last commit
+git commit --amend
+
+# Get logs
+git log
+git log --oneline
+git log --oneline --decorate
+git log --oneline --graph --decorate
+
+# Remove staged file to unstaged
+git restore --staged <filename>
+
+# Restore the changed content from an unstaged file
+git restore <filename>
+
+# Revert to a specific commit
+git revert <commit_id>
+
+# BRANCHES
+
+# List branches
+git branch -a
+
+# Checkout to a branch
+git checkout <branch_name>
+
+# Create and checkout to a branch
+git checkout -b <branch_name>
+
+# Rename old branch to new branch
+git branch -m <my_old_branch> <my_new_branch>
+
+# Delete a branch
+git branch -d <branch_name>
+
+# MERGING
+
+git merge <from_branch>
+
+# Merge wihtout Fast Forward
+git merge ftr1 --no-ff
+
+# REBASE
+
+# Rebase main branch's content to the currently working feature branch
+git rebase <main_branch>
+
+# STASH
+
+# Stash the current un-staged changes
+git stash
+
+# Bring back the stashed changes
+git stash apply
+
+git stash drop
+git stash list
+
+# To apply and drop the stash at once, use this command
+git stash pop
+
+# TAGGING
+
+git tag myTag
+git tag --list
+git tag --delete list
+
+# Annotated tag
+git tag -a myTag
+
+# Show details of annotated tag
+git show myTag
+
+

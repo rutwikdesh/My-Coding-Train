@@ -55,6 +55,8 @@ git merge ftr1 --no-ff
 # Rebase main branch's content to the currently working feature branch
 git rebase <main_branch>
 
+git rebase --abort
+
 # STASH
 
 # Stash the current un-staged changes

@@ -4,34 +4,56 @@ using namespace std;
 
 int main()
 {
-  string s = "erase*****";
-  string temp = s;
-  s.erase(1, 4);
-  int n = s.size(), count = 0;
-  int i = n - 1;
-  int start, end;
+  string str = "aabcbdbdbbdcdabd";
 
-  while (i >= 0)
+  int k = 3;
+
+  int i = 0, j = 0;
+
+  unordered_set<char> s;
+  unordered_map<char, int> m;
+
+  for (j; j < k; j++)
   {
-    if (temp[i] == '*')
+    if (m.find(str[j]) != m.end())
     {
-      if (count == 0)
-      {
-        start = i;
-      }
-      count++;
+      m[str[j]]++;
     }
     else
     {
-      if (count != 0)
-      {
-        end = i;
-        temp.erase(end + end - start, start);
-        i = end + end - start;
-      }
-      count = 0;
+      m[str[j]] = 1;
+      k--;
+      s.insert(str[j]);
     }
-    i--;
   }
-  cout << temp << endl;
+
+  while (j < str.size())
+  {
+    if (s.find(str[j]) != s.end())
+    {
+      m[str[j]] += 1;
+      j++;
+    }
+    else
+    {
+      if (k <= 0)
+      {
+        m[str[i]] -= 1;
+        if (m[str[i]] == 0)
+        {
+          s.erase(str[i]);
+          k++;
+        }
+        i++;
+      }
+      else{
+        k--;
+      }
+      m[str[j]] = 1;
+      s.insert(str[j]);
+    }
+    j++;
+  }
+
+  cout<<j-i;
 }

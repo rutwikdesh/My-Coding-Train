@@ -12,4 +12,5 @@ class HelloControllerTest {
         String response = helloController.hello("world"); // Act
         assertEquals("Hello, world", response); // Assert
     }
+
 }

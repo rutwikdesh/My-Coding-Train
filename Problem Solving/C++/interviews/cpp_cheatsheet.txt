@@ -5,6 +5,9 @@
     // 5x5 vector with "0" filled
     vector<vector<int>> v(5, vector<int>(5, 0));
 
+!!! Random in C++
+    cout << rand() % 10 << endl;
+
 !!! Define a priority queue(MAX Heap)
     priority_queue<int> pq;
 

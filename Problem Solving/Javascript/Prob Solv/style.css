@@ -1,0 +1,44 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.up {
+  width: 200px;
+  height: 300px;
+  background-color: blue;
+}
+
+.parent {
+  width: 200px;
+  height: 600px;
+  background-color: red;
+  display: flex;
+  position: relative;
+}
+
+.child {
+  position: sticky;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  display: flex;
+  top: 200px;
+}
+
+.down {
+  width: 200px;
+  height: 1000px;
+  background-color: pink;
+}
+
+.child2 {
+  position: fixed;
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  display: flex;
+  bottom: 0;
+}

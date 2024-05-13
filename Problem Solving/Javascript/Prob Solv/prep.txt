@@ -1,0 +1,4 @@
+1. Are you an expert in HTTP terminologies such as Request/Response cycle, content negotiation, CORS, etc.
+
+
+

@@ -1,4 +1,7 @@
-1. Are you an expert in HTTP terminologies such as Request/Response cycle, content negotiation, CORS, etc.
+1) Are you an expert in HTTP terminologies such as Request/Response cycle, content negotiation, CORS, etc.
+2) Experience into , JavaScript and TypeScript and must have a clear understanding of basic web fundamentals such as prototype-based inheritance, scopes, Event Loop, Memory Management in JS, etc.
+3) Should also have in-depth understanding of latest ES6 standards such as spread operators, arrow functions, etc.
+4) Hands-on understanding of latest paradigms in Frontend Development such as Pub-Sub Pattern, State Management, Service Workers, Web Components, Client Caching, Lazy Loading, Dynamic Injection, Bundle Optimization, Reactive Design, Microfrontends, Module Federation.
 
 
 

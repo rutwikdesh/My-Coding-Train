@@ -1,0 +1,21 @@
+void SortedStack :: sort()
+{
+    if (!this.s.empty()) {
+        int topEle = this.s.pop();
+        sort();
+        sortAndInsert(topEle);
+    }
+}
+
+void SortedStack :: sortAndInsert(int topEle)
+{
+    
+    if (this.s.empty() || topEle > this.s.top()) {
+        this.s.push(topEle);
+    }
+    else {
+        int currTop = this.s.pop();
+        sortAndInsert(topEle);
+        this.s.push(currTop);
+    }
+}

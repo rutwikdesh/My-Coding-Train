@@ -1,13 +1,4 @@
-var a = 'abc';
+console.log("gg");
+console.log("LOLZ");
 
-const myFun = () => {
-  var k = {
-    "c": 1,
-    "d": {
-      k: 2
-    },
-    d: {
-      e: 1,
-    }
-  }
-};
+console.log("okay");

@@ -22,7 +22,6 @@ parkingLot.addSlot("bike");
 parkingLot.addSlot("truck");
 
 app.post("/api/park", (req, res) => {
-  console.log(req.body);
   const { number, type } = req.body;
   const vehicle = new Vehicle(number, type);
   const slot = parkingLot.parkVehicle(vehicle);

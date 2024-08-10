@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { createPost, getPosts } from "../../api";
+import { useEffect, useState } from "React";
+import { createPost, deletePost, getPosts } from "../../api";
 import PostForm from "./PostForm";
 import PostList from "./PostList";
 
@@ -35,6 +35,15 @@ const Posts = () => {
     }
   };
 
+  const deletePosts = async (id) => {
+    try {
+      await deletePost(id);
+      fetchPosts();
+    } catch (error) {
+      console.error("Failed to delete post:", error.message);
+    }
+  };
+
   return (
     <div className="flex flex-col w-full justify-center items-center">
       <div className="flex justify-between w-full mb-4">
@@ -58,7 +67,7 @@ const Posts = () => {
         />
       )}
 
-      <PostList posts={posts} />
+      <PostList posts={posts} deletePosts={deletePosts} />
     </div>
   );
 };

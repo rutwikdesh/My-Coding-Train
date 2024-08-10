@@ -18,4 +18,15 @@ const createPost = async (data) => {
   }
 };
 
-export { getPosts, createPost };
+const deletePost = async (id) => {
+  try {
+    const response = await axios.delete(
+      `http://localhost:3000/api/posts/${id}`
+    );
+    return response;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+export { getPosts, createPost, deletePost };

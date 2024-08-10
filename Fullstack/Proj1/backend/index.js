@@ -1,7 +1,3 @@
-// import express from "express";
-// import bodyParser from "body-parser";
-// import dotenv from "dotenv";
-// import helmet from "helmet";
 // import path from "path";
 // import { fileURLtoPath } from "url";
 // const __filename = fileURLtoPath(import.meta.url);
@@ -12,6 +8,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
+const postRoutes = require("./routes/postRoutes");
 require("dotenv").config();
 
 const app = express();
@@ -29,6 +26,8 @@ app.use(morgan("tiny"));
 
 // Routes
 // app.use("/api/posts", postRoutes);
+
+app.use("/api/posts", postRoutes);
 
 app.get("/posts", (req, res) => {
   res.send({

@@ -42,7 +42,6 @@ class ParkingLot {
       slot.release();
       const timeOccupied =
         (Date.now() - slot.parkedTime) / (Math.pow(10, 3) * 3600);
-      console.log(timeOccupied);
       ParkingLot.revenue += timeOccupied * this.slotPricePerHr[type];
       return slot;
     }

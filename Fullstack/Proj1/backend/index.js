@@ -11,11 +11,15 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const connectDB = require("./config/db");
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+// connect to the database
+connectDB();
 
 // helps in securing http headers
 app.use(helmet());

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Update</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+      #updated-file {
+        background-color: #f7f0f0;
+        padding: 10px;
+        border: 1px solid #565656;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Real time file Update</h1>
+    <pre id="updated-file">Waiting for updates...</pre>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+      socket.on("file-update", (data) => {
+        document.getElementById("updated-file").innerText = data;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.blue {
+  background-color: blue;
+  flex: 1 1 0;
+}
+
+.red {
+  background-color: red;
+  flex: 4 4 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(67, 67, 67);
+}

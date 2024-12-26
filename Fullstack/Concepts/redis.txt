@@ -1,0 +1,13 @@
+// Using redis in Docker //
+
+// docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+// docker ps
+// docker exec -it c2c567f64ee7 bash
+// redis-cli
+// set name rutwik
+// get name
+// set name:1 rutwik
+// set name:1 rutwik nx // only add keys if not already exits
+// mget name:1 name:2  // Get multiple keys
+
+

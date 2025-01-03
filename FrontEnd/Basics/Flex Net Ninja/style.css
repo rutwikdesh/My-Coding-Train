@@ -1,0 +1,37 @@
+* {
+  font-family: verdana;
+  margin: 0;
+}
+
+body {
+  background: #eee;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.flex-container {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+}
+
+.box {
+  height: 40px;
+  flex: 1 1 40px;
+}
+
+.one {
+  background: red;
+}
+
+.two {
+  background: blue;
+}
+
+.three {
+  background: green;
+}

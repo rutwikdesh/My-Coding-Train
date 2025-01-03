@@ -1,24 +1,22 @@
-const myRequest = (url) => {
-  return new Promise((resolve, reject) => {
-    const delay = Math.floor(Math.random() * 4500 + 500);
-    console.log(delay);
-    setTimeout(() => {
-      if (delay > 4000) {
-        reject("Connection Timeout");
-      } else {
-        resolve(`Here is your fake data ${url}`);
-      }
-    }, delay);
-  });
+var singleNumber = function (nums) {
+  let xor = 0;
+  for (let i = 0; i < nums.length; i++) {
+    xor ^= nums[i];
+  }
+  const firstSetBit = (xor & (xor - 1)) ^ xor;
+  let bucket1 = 0,
+    bucket2 = 0;
+
+  console.log(firstSetBit);
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] & firstSetBit) {
+      bucket1 ^= nums[i];
+    } else {
+      bucket2 ^= nums[i];
+    }
+  }
+  return [bucket1, bucket2];
 };
 
-async function makeReq() {
-  try {
-    let data1 = await myRequest("www.gsgssdsfsdfs.comm");
-    console.log(data1);
-  } catch (e) {
-    console.log("Error caught!", e);
-  }
-}
-
-makeReq();
+console.log(singleNumber([1, 2, 1, 3, 2, 5]));

@@ -31,6 +31,13 @@ const sumParam = (sumNum) => {
   return helperSumParam(sumNum, num);
 };
 
+/**
+ *
+ * @param {number} sumNum
+ * @param {number} currNum
+ * @returns {number}
+ */
+
 const helperSumParam = (sumNum, currNum) => {
   if (sumNum === 0) return currNum;
   return helperSumParam(sumNum - 1, currNum + sumNum);

@@ -1,8 +1,4 @@
-def fun():
-    dp = [-1]*10
-
-    print(dp[9])
-
-
-if __name__ == '__main__':
-    fun()
+from collections import Counter
+l = [1, 2, 3, 4, 1, 2, 2]
+freq = Counter(l)
+print(freq)

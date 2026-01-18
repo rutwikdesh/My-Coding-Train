@@ -97,6 +97,20 @@ Parking Lot/
 
 You can run the main entry point (`index.ts`) to see the Parking Lot system in action. Modify `index.ts` to test different scenarios.
 
+Step 1:
+
+```bash
+npx tsc --init
+```
+
+Step 2:
+
+```bash
+ts-node index.ts
+```
+
+or
+
 ```bash
 npm start
 # or

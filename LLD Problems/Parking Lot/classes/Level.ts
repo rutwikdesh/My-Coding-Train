@@ -2,8 +2,8 @@ import ParkingSpot from "./ParkingSpot";
 import Vehicle from "./Vehicle";
 
 export default class Level {
-  levelId: number;
-  spots: Array<ParkingSpot>;
+  readonly levelId: number;
+  readonly spots: Array<ParkingSpot>;
   constructor(levelId: number, spots: Array<ParkingSpot>) {
     this.levelId = levelId;
     this.spots = spots;

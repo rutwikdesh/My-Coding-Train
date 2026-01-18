@@ -11,10 +11,10 @@ export default class ParkingLot {
     for (let level of this.levels) {
       const spot = level.parkVehicle(vehicle);
       if (spot) {
-        return `Vehicle parked at level ${level.levelId}`;
+        return `${vehicle.type} parked at level ${level.levelId}`;
       }
     }
-    return `Vechicle can't be parked. No spot available`;
+    return `${vehicle.type} can't be parked. No spot available`;
   }
 
   leaveSpot(vehicle: Vehicle) {
